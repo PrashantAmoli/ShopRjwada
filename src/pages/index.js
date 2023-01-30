@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Buy, AR, QR } from '../components';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const PRODUCT = {
 	brand: 'Bacca Bucci',
@@ -28,15 +29,17 @@ export default function Home() {
 
 						<Image src="/images/brand-logo.svg" alt="Brand Logo" width={150} height={44} className="sm:hidden" />
 
-						<Image src="/images/share.svg" alt="Share" width={33} height={33} className="bg-black p-1 rounded-md" />
+						<Link href="/qr">
+							<Image src="/images/share.svg" alt="Share" width={33} height={33} className="bg-black p-1 rounded-md" />
+						</Link>
 					</div>
 
 					<div className="hidden sm:flex w-full min-h-fit absolute top-14 p-1 justify-center">
-						<button className="relative left-3 w-52 py-2 px-8 mx-1 text-black rounded-full bg-orange-400 hover:bg-orange-500 font-bold">
+						<button className="relative left-3 w-52 py-2 px-8 mx-1 text-black rounded-full bg-orange-400 hover:bg-orange-500 font-semibold ">
 							360 View
 						</button>
 
-						<button className="relative right-3 w-52 py-2 px-8 mx-1 text-white font-bold rounded-full bg-black hover:bg-gray-900">
+						<button className="relative right-3 w-52 py-2 px-8 mx-1 text-white font-semibold rounded-full bg-black hover:bg-gray-900">
 							View in your room
 						</button>
 					</div>
