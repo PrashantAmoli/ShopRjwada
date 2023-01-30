@@ -2,6 +2,8 @@ import Head from 'next/head';
 import { Buy, AR, QR } from '../components';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+import QRModal from '@/components/layouts/QRModal';
 
 const PRODUCT = {
 	brand: 'Bacca Bucci',
@@ -14,6 +16,8 @@ const PRODUCT = {
 };
 
 export default function Home() {
+	const [modalOpen, setModalOpen] = useState(false);
+
 	return (
 		<>
 			<Head>
@@ -25,21 +29,22 @@ export default function Home() {
 			<main className=" select-text overflow-x-hidden">
 				<div className="w-full relative md:w-8/12 xl:w-7/12 mx-auto flex flex-col justify-center items-center min-h-screen overflow-x-hidden border border-green-500">
 					<div className="absolute md:fixed top-1 px-3 md:px-5 lg:px-8 py-2 w-full flex justify-between items-center">
-						<Image src="/images/back-arrow.svg" alt="Back" width={33} height={33} className="" />
+						<Image src="/images/white-arrow.svg" alt="Back" width={33} height={33} className="bg-black p-1 rounded-md h-8" />
 
-						<Image src="/images/brand-logo.svg" alt="Brand Logo" width={150} height={44} className="sm:hidden" />
+						<Image src="/images/brand-logo.svg" alt="Brand Logo" width={150} height={44} className="lg:hidden" />
 
-						<Link href="/qr">
-							<Image src="/images/share.svg" alt="Share" width={33} height={33} className="bg-black p-1 rounded-md" />
-						</Link>
+						<Image src="/images/share.svg" alt="Share" width={33} height={33} className="bg-black p-1 rounded-md" />
 					</div>
 
-					<div className="hidden sm:flex w-full min-h-fit absolute top-14 p-1 justify-center">
-						<button className="relative left-3 w-52 py-2 px-8 mx-1 text-black rounded-full bg-orange-400 hover:bg-orange-500 font-semibold ">
+					<div className="hidden lg:flex w-full min-h-fit absolute top-14 p-1 justify-center">
+						<button className="relative left-4 w-52 py-3 px-8 mx-1 text-black rounded-full bg-orange-400 hover:bg-orange-500 font-semibold ">
 							360 View
 						</button>
 
-						<button className="relative right-3 w-52 py-2 px-8 mx-1 text-white font-semibold rounded-full bg-black hover:bg-gray-900">
+						<button
+							className="relative right-4 w-52 py-3 px-8 mx-1 text-white font-semibold rounded-full bg-black hover:bg-gray-900"
+							onClick={() => setModalOpen(true)}
+						>
 							View in your room
 						</button>
 					</div>
@@ -47,6 +52,8 @@ export default function Home() {
 					<AR product={PRODUCT} />
 
 					<Buy product={PRODUCT} />
+
+					<QRModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
 				</div>
 			</main>
 		</>

@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export default function QR() {
 	return (
-		<div className="QR fixed z-10 inset-0  bg-white px-2">
-			<div className="w-fit h-screen mx-auto flex flex-col justify-evenly items-center">
+		<div className="QR relative z-10 inset-0  px-2 flex flex-col items-center">
+			<div className="w-fit mx-auto flex flex-col gap-8 justify-evenly items-center">
 				<button className="btn-green w-full mx-4">View in room</button>
 
 				<div>
