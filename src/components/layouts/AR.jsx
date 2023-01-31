@@ -44,10 +44,11 @@ export default function AR({ product }) {
 					auto-rotate
 					outline="none"
 					ar
-				></model-viewer>
-				{/* <button slot="ar-button" className="bg-gray-200 rounded-md p-2 absolute top-2 right-2 z-50">
+				>
+					{/* <button slot="ar-button" className="bg-gray-200 rounded-md p-2 absolute top-2 right-2 z-50">
 						View in My Space
 					</button> */}
+				</model-viewer>
 			</div>
 		</>
 	);
