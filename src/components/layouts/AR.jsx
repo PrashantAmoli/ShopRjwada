@@ -1,5 +1,6 @@
-// import Script from 'next/script';
-import '@google/model-viewer';
+import Script from 'next/script';
+// import { ModelViewerElement } from '@google/model-viewer';
+// import '@google/model-viewer';
 
 const OPTIONS = {
 	iosSrc: '',
@@ -19,12 +20,13 @@ const OPTIONS = {
 export default function AR({ product }) {
 	return (
 		<>
-			{/* <Script
+			<Script
+				type="module"
 				src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
 				onLoad={() => console.log('Model Viewer Loaded')}
 				onReady={() => console.log('Model Viewer Ready')}
 				onError={() => console.log('Model Viewer Error')}
-			/> */}
+			/>
 
 			<div className="absolute top-16 md:top-20 lg:top-28 w-full min-h-[68vh] flex justify-center rounded-xl cursor-grab">
 				<model-viewer
@@ -42,11 +44,10 @@ export default function AR({ product }) {
 					auto-rotate
 					outline="none"
 					ar
-				>
-					{/* <button slot="ar-button" className="bg-gray-200 rounded-md p-2 absolute top-2 right-2 z-50">
+				></model-viewer>
+				{/* <button slot="ar-button" className="bg-gray-200 rounded-md p-2 absolute top-2 right-2 z-50">
 						View in My Space
 					</button> */}
-				</model-viewer>
 			</div>
 		</>
 	);
