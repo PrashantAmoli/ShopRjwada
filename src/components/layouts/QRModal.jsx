@@ -1,6 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
-import QRPage from '@/pages/qr';
+import { QR } from '@/components';
 
 export default function QRModal({ modalOpen, setModalOpen }) {
 	// const dispatch = useDispatch();
@@ -57,7 +57,7 @@ export default function QRModal({ modalOpen, setModalOpen }) {
 								<Dialog.Panel className="w-full max-w-xl flex flex-col justify-center h-[66vh] sm:h-[85vh] transform overflow-hidden rounded-2xl bg-white/70 backdrop-blur-xl p-2 pb-6 sm:p-6 text-left align-middle shadow-xl transition-all select-none">
 									<Dialog.Title as="h3" className=""></Dialog.Title>
 
-									<QRPage />
+									<QR />
 								</Dialog.Panel>
 							</Transition.Child>
 						</div>
