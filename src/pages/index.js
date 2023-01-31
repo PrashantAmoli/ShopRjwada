@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import { Buy, AR, QR } from '../components';
+import { Buy, AR, QRModal } from '../components';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import QRModal from '@/components/layouts/QRModal';
 
 const PRODUCT = {
 	brand: 'Bacca Bucci',
@@ -27,7 +26,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className=" select-text overflow-x-hidden">
-				<div className="w-full relative md:w-8/12 xl:w-7/12 mx-auto flex flex-col justify-center items-center min-h-screen overflow-x-hidden border border-green-500">
+				<div className="w-full relative md:w-8/12 xl:w-7/12 mx-auto flex flex-col justify-center items-center min-h-screen overflow-x-hidden ">
 					{/* Top bar */}
 					<div className="absolute md:fixed top-1 px-3 md:px-5 lg:px-8 py-2 w-full flex justify-between items-center">
 						<Image src="/images/white-arrow.svg" alt="Back" width={33} height={33} className="bg-black p-1 rounded-md h-8 cursor-pointer" />

@@ -8,7 +8,7 @@ export default function Document() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta name="theme-color" content="#000000" />
 				<meta name="author" content="Rjwada" />
-				<meta name="description" content="Prototype of Rjwada web demo app for AR (3D/360) view and VR (Virtual try on)" />
+				<meta name="description" content="Prototype of Rjwada web demo app for AR & VR app for 3D/360 view and Virtual try on." />
 				<meta name="keywords" content="Rjwada, web, demo, app" />
 				<meta name="robots" content="index, follow" />
 				<meta name="googlebot" content="index, follow" />
