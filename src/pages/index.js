@@ -28,12 +28,13 @@ export default function Home() {
 			</Head>
 			<main className=" select-text overflow-x-hidden">
 				<div className="w-full relative md:w-8/12 xl:w-7/12 mx-auto flex flex-col justify-center items-center min-h-screen overflow-x-hidden border border-green-500">
+					{/* Top bar */}
 					<div className="absolute md:fixed top-1 px-3 md:px-5 lg:px-8 py-2 w-full flex justify-between items-center">
-						<Image src="/images/white-arrow.svg" alt="Back" width={33} height={33} className="bg-black p-1 rounded-md h-8" />
+						<Image src="/images/white-arrow.svg" alt="Back" width={33} height={33} className="bg-black p-1 rounded-md h-8 cursor-pointer" />
 
-						<Image src="/images/brand-logo.svg" alt="Brand Logo" width={150} height={44} className="lg:hidden" />
+						<Image src="/images/brand-logo.svg" alt="Brand Logo" width={150} height={44} className="lg:hidden cursor-pointer" />
 
-						<Image src="/images/share.svg" alt="Share" width={33} height={33} className="bg-black p-1 rounded-md" />
+						<Image src="/images/share.svg" alt="Share" width={33} height={33} className="bg-black p-1 rounded-md cursor-pointer" />
 					</div>
 
 					<div className="hidden lg:flex w-full min-h-fit absolute top-14 p-1 justify-center">

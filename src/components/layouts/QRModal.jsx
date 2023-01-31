@@ -48,17 +48,14 @@ export default function QRModal({ modalOpen, setModalOpen }) {
 							<Transition.Child
 								as={Fragment}
 								enter="ease-out duration-300"
-								enterFrom="opacity-0 scale-95"
+								enterFrom="opacity-0 scale-50"
 								enterTo="opacity-100 scale-100"
 								leave="ease-in duration-200"
 								leaveFrom="opacity-100 scale-100"
-								leaveTo="opacity-0 scale-95"
+								leaveTo="opacity-0 scale-50"
 							>
 								<Dialog.Panel className="w-full max-w-xl flex flex-col justify-center h-[66vh] sm:h-[85vh] transform overflow-hidden rounded-2xl bg-white/70 backdrop-blur-xl p-2 pb-6 sm:p-6 text-left align-middle shadow-xl transition-all select-none">
-									<Dialog.Title
-										as="h3"
-										className="text-xl font-medium leading-6 text-head bg-white/50 backdrop-blur-3xl absolute -top-4 -left-4 p-3 pt-8 px-8 w-10/12 sm:w-max rounded-3xl shadow-2xl"
-									></Dialog.Title>
+									<Dialog.Title as="h3" className=""></Dialog.Title>
 
 									<QRPage />
 								</Dialog.Panel>
