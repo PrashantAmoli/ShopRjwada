@@ -2,7 +2,8 @@ import Head from 'next/head';
 import { Buy, AR, QRModal } from '../components';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 const PRODUCT = {
 	brand: 'Bacca Bucci',
@@ -75,6 +76,20 @@ export default function Product({ ModelSrc = '/models/leather_sofa.glb' }) {
 	const [modalOpen, setModalOpen] = useState(false);
 	// const [ModelSrc, setModelSrc] = useState(MODELS[0].src);
 
+	const router = useRouter();
+
+	useEffect(() => {
+		router.prefetch('/');
+		router.prefetch('/0');
+		router.prefetch('/1');
+		router.prefetch('/2');
+		router.prefetch('/3');
+		router.prefetch('/4');
+		router.prefetch('/5');
+		router.prefetch('/6');
+		router.prefetch('/7');
+	}, []);
+
 	return (
 		<>
 			<Head>
@@ -95,7 +110,7 @@ export default function Product({ ModelSrc = '/models/leather_sofa.glb' }) {
 							className="bg-black p-1 rounded-md h-8 cursor-pointer hover:scale-105"
 						/>
 
-						<Image src="/icons/android-chrome-192x192.png" alt="Brand Logo" width={150} height={44} className="cursor-pointer h-11 w-12" />
+						<Image src="/icons/android-chrome-192x192.png" alt="Brand Logo" width={150} height={44} className="cursor-pointer h-12 w-14" />
 
 						<Image src="/images/share.svg" alt="Share" width={33} height={33} className="bg-black p-1 rounded-md cursor-pointer hover:scale-105" />
 					</div>

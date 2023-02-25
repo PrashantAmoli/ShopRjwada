@@ -2,7 +2,8 @@ import Head from 'next/head';
 import { Buy, AR, QRModal } from '../components';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 const PRODUCT = {
 	brand: 'Bacca Bucci',
@@ -52,6 +53,18 @@ const MODELS = [
 export default function Home() {
 	const [modalOpen, setModalOpen] = useState(false);
 	const [ModelSrc, setModelSrc] = useState(MODELS[0].src);
+	const router = useRouter();
+
+	useEffect(() => {
+		router.prefetch('/0');
+		router.prefetch('/1');
+		router.prefetch('/2');
+		router.prefetch('/3');
+		router.prefetch('/4');
+		router.prefetch('/5');
+		router.prefetch('/6');
+		router.prefetch('/7');
+	}, []);
 
 	return (
 		<>
