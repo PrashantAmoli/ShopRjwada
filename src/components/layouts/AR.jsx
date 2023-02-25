@@ -27,7 +27,7 @@ export default function AR({ src = '/models/ShoeBlueAndWhite.glb' }) {
 					alt="Asian Shoes 3D"
 					style={{
 						width: '100%',
-						minHeight: '72vh',
+						minHeight: '80vh',
 						outline: 'none',
 						display: 'flex',
 						justifyContent: 'center',
@@ -44,7 +44,10 @@ export default function AR({ src = '/models/ShoeBlueAndWhite.glb' }) {
 					outline="none"
 					ar
 				>
-					<button slot="ar-button" className="bg-gray-200 text-sm rounded-md p-1.5 absolute top-1 right-1 sm:right-4 z-20">
+					<button
+						slot="ar-button"
+						className="bg-gray-900 hover:bg-gray-800 hover:scale-x-105 border-white border-2 text-sm rounded-md px-1.5 py-0.5 absolute top-1 right-1 sm:right-4 z-20"
+					>
 						View in My Space
 					</button>
 				</model-viewer>

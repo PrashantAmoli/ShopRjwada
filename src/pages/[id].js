@@ -17,6 +17,16 @@ const PRODUCT = {
 
 const MODELS = [
 	{
+		name: 'sofa',
+		src: '/models/leather_sofa.glb',
+		link: '/sofa',
+	},
+	{
+		name: 'bag',
+		src: '/models/rothys_travel_bag.glb',
+		link: '/bag',
+	},
+	{
 		name: 'Shoe0',
 		src: '/models/ShoeBlueAndWhite.glb',
 		link: '/shoe0',
@@ -45,16 +55,6 @@ const MODELS = [
 		name: 'shoe5',
 		src: '/models/shoe5.glb',
 		link: '/shoe5',
-	},
-	{
-		name: 'sofa',
-		src: '/models/leather_sofa.glb',
-		link: '/sofa',
-	},
-	{
-		name: 'bag',
-		src: '/models/rothys_travel_bag.glb',
-		link: '/bag',
 	},
 ];
 

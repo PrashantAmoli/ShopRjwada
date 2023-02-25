@@ -5,6 +5,18 @@ import { useState } from 'react';
 
 const MODELS = [
 	{
+		name: 'sofa',
+		src: '/models/leather_sofa.glb',
+		link: '/sofa',
+		image: '/models/sofa.png',
+	},
+	{
+		name: 'bag',
+		src: '/models/rothys_travel_bag.glb',
+		link: '/bag',
+		image: '/models/bag.png',
+	},
+	{
 		name: 'Shoe0',
 		src: '/models/ShoeBlueAndWhite.glb',
 		link: '/shoe0',
@@ -40,18 +52,6 @@ const MODELS = [
 		link: '/shoe5',
 		image: '/models/shoe5.png',
 	},
-	{
-		name: 'sofa',
-		src: '/models/leather_sofa.glb',
-		link: '/sofa',
-		image: '/models/sofa.png',
-	},
-	{
-		name: 'bag',
-		src: '/models/rothys_travel_bag.glb',
-		link: '/bag',
-		image: '/models/bag.png',
-	},
 ];
 
 export default function App({ Component, pageProps }) {
@@ -74,21 +74,21 @@ export default function App({ Component, pageProps }) {
 				))}
 			</div> */}
 
-			<div className="absolute bottom-0 left-0 right-0 scrollbar-hide flex w-full max-w-4xl mx-auto overflow-x-auto space-x-8 sm:space-x-14 px-4 pb-1 snap-x snap-proximity">
+			<div className="absolute z-20 bottom-2 left-0 right-0 scrollbar-hide flex w-full max-w-4xl mx-auto overflow-x-auto space-x-8 sm:space-x-12 px-4 py-1.5 snap-x snap-proximity">
 				{MODELS.map((item, index) => (
 					<Link
 						href={`/${index}`}
-						className="flex-shrink-0 rounded-full rounded-br-md rounded-bl-md backdrop-blur select-none snap-center"
+						className="flex-shrink-0 rounded-full rounded-br-md rounded-bl-md backdrop-blur select-text snap-center hover:scale-105 focus:-translate-y-1 transition-all duration-300 ease-in-out transform hover:shadow-2xl"
 						key={index}
 					>
 						<Image
 							src={item.image}
-							height={70}
-							width={70}
-							className="bg-purple-900 h-14 w-14 rounded-full border-2 border-purple-900"
+							height={80}
+							width={80}
+							className="bg-purple-900 h-14 w-14 rounded-full border-2 border-purple-900 hover:border-purple-700 select-text"
 							alt={item.name}
 						/>
-						<p className="uppercase text-sm text-center w-full text-white font-semibold">{item.name}</p>
+						<p className="uppercase text-xs text-center w-full text-white font-semibold">{item.name}</p>
 					</Link>
 				))}
 			</div>
