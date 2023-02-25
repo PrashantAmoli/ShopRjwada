@@ -14,8 +14,44 @@ const PRODUCT = {
 	link: 'https://www.amazon.in/Bacca-Bucci-OffBeat-Urban-Streetwear/dp/B08JZQZQZK/ref=sr_1_1?dchild=1&keywords=Bacca+Bucci+Men%27s+OffBeat+Mid-Top+Urban+Streetwear+Sneakers+Socks+Shoes+%7C+Chunky+outsole&qid=1619620003&sr=8-1',
 };
 
+const MODELS = [
+	{
+		name: 'Shoe0',
+		src: '/models/ShoeBlueAndWhite.glb',
+	},
+	{
+		name: 'shoe1',
+		src: '/models/shoe1.glb',
+	},
+	{
+		name: 'shoe2',
+		src: '/models/shoe2.glb',
+	},
+	{
+		name: 'shoe3',
+		src: '/models/shoe3.glb',
+	},
+	{
+		name: 'shoe4',
+		src: '/models/shoe4.glb',
+	},
+	{
+		name: 'shoe5',
+		src: '/models/shoe5.glb',
+	},
+	{
+		name: 'sofa',
+		src: '/models/leather_sofa.glb',
+	},
+	{
+		name: 'bag',
+		src: '/models/rothys_travel_bag.glb',
+	},
+];
+
 export default function Home() {
 	const [modalOpen, setModalOpen] = useState(false);
+	const [ModelSrc, setModelSrc] = useState(MODELS[0].src);
 
 	return (
 		<>
@@ -55,11 +91,23 @@ export default function Home() {
 						</button>
 					</div> */}
 
-					<AR product={PRODUCT} />
+					<AR src={ModelSrc} />
 
 					{/* <Buy product={PRODUCT} /> */}
 
 					<QRModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+				</div>
+
+				<div class="snap-mandatory snap-x absolute bottom-0 left-0 right-0 h-9 overflow-y-hidden scrollbar-hide overflow-x-scroll flex gap-x-6 px-4 justify-center pb-3">
+					{MODELS.map((model, index) => (
+						<button
+							key={index}
+							className="w-max px-4 uppercase py-4 bg-blue-500 text-white cursor-pointer rounded-lg font-semibold flex justify-center items-center hover:scale-x-110 hover:bg-blue-400"
+							onClick={() => setModelSrc(model.src)}
+						>
+							{model.name}
+						</button>
+					))}
 				</div>
 			</main>
 		</>

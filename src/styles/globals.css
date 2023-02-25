@@ -10,3 +10,7 @@
 		@apply rounded-full bg-black text-white px-8 py-3;
 	}
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
