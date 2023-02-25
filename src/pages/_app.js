@@ -74,14 +74,18 @@ export default function App({ Component, pageProps }) {
 				))}
 			</div> */}
 
-			<div className="absolute bottom-0 left-0 right-0 scrollbar-hide flex w-full max-w-4xl mx-auto overflow-x-auto space-x-8 sm:space-x-14">
+			<div className="absolute bottom-0 left-0 right-0 scrollbar-hide flex w-full max-w-4xl mx-auto overflow-x-auto space-x-8 sm:space-x-14 px-4 pb-1 snap-x snap-proximity">
 				{MODELS.map((item, index) => (
-					<Link href={`/${index}`} className="flex-shrink-0 rounded-full rounded-br-md rounded-bl-md backdrop-blur" key={index}>
+					<Link
+						href={`/${index}`}
+						className="flex-shrink-0 rounded-full rounded-br-md rounded-bl-md backdrop-blur select-none snap-center"
+						key={index}
+					>
 						<Image
 							src={item.image}
 							height={70}
 							width={70}
-							className="bg-purple-900 h-14 w-14 rounded-full border-2 border-purple-800"
+							className="bg-purple-900 h-14 w-14 rounded-full border-2 border-purple-900"
 							alt={item.name}
 						/>
 						<p className="uppercase text-sm text-center w-full text-white font-semibold">{item.name}</p>
