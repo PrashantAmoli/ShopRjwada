@@ -4,21 +4,76 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
+const PRODUCT = {
+	brand: 'Bacca Bucci',
+	name: "Bacca Bucci Men's OffBeat Mid-Top Urban Streetwear Sneakers Socks Shoes | Chunky outsole",
+	price: 'Rs. 1,999.00',
+	mrp: 'Rs. 4,999.00',
+	discount: '60% off',
+	image: '/images/shoe.svg',
+	link: 'https://www.amazon.in/Bacca-Bucci-OffBeat-Urban-Streetwear/dp/B08JZQZQZK/ref=sr_1_1?dchild=1&keywords=Bacca+Bucci+Men%27s+OffBeat+Mid-Top+Urban+Streetwear+Sneakers+Socks+Shoes+%7C+Chunky+outsole&qid=1619620003&sr=8-1',
+};
+
 const MODELS = [
-	'/models/ShoeBlueAndWhite.glb',
-	'/models/shoe1.glb',
-	'/models/shoe2.glb',
-	'/models/shoe3.glb',
-	'/models/shoe4.glb',
-	'/models/shoe5.glb',
-	'/models/leather_sofa.glb',
-	'/models/rothys_travel_bag.glb',
+	{
+		name: 'Shoe0',
+		src: '/models/ShoeBlueAndWhite.glb',
+		link: '/shoe0',
+	},
+	{
+		name: 'shoe1',
+		src: '/models/shoe1.glb',
+		link: '/shoe1',
+	},
+	{
+		name: 'shoe2',
+		src: '/models/shoe2.glb',
+		link: '/shoe2',
+	},
+	{
+		name: 'shoe3',
+		src: '/models/shoe3.glb',
+		link: '/shoe3',
+	},
+	{
+		name: 'shoe4',
+		src: '/models/shoe4.glb',
+		link: '/shoe4',
+	},
+	{
+		name: 'shoe5',
+		src: '/models/shoe5.glb',
+		link: '/shoe5',
+	},
+	{
+		name: 'sofa',
+		src: '/models/leather_sofa.glb',
+		link: '/sofa',
+	},
+	{
+		name: 'bag',
+		src: '/models/rothys_travel_bag.glb',
+		link: '/bag',
+	},
 ];
 
-export default function Home() {
-	const [modalOpen, setModalOpen] = useState(false);
+export async function getServerSideProps(context) {
+	const { id } = context.query;
 
-	const [ModelSrc, setModelSrc] = useState('/models/scene.gltf');
+	const src = MODELS[id].src || '/models/leather_sofa.glb';
+	console.log(src[0]);
+
+	console.log(id);
+	return {
+		props: {
+			ModelSrc: src,
+		},
+	};
+}
+
+export default function Product({ ModelSrc = '/models/leather_sofa.glb' }) {
+	const [modalOpen, setModalOpen] = useState(false);
+	// const [ModelSrc, setModelSrc] = useState(MODELS[0].src);
 
 	return (
 		<>
@@ -64,6 +119,18 @@ export default function Home() {
 
 					<QRModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
 				</div>
+
+				{/* <div class="w-full max-w-2xl mx-auto absolute bottom-0 left-0 right-0 overflow-hidden scrollbar-hide grid justify-items-center grid-cols-2 sm:grid-cols-5 gap-x-4 gap-y-2 px-4 justify-center pb-2">
+					{MODELS.map((model, index) => (
+						<button
+							key={index}
+							className="select-none w-32 h-9 px-4 uppercase py-4 bg-blue-500 text-white cursor-pointer rounded-lg font-semibold flex justify-center items-center hover:scale-x-110 hover:bg-blue-600"
+							onClick={() => setModelSrc(model.src)}
+						>
+							{model.name}
+						</button>
+					))}
+				</div> */}
 			</main>
 		</>
 	);
