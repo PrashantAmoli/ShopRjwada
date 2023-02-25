@@ -98,11 +98,11 @@ export default function Home() {
 					<QRModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
 				</div>
 
-				<div class="snap-mandatory snap-x absolute bottom-0 left-0 right-0 h-9 overflow-y-hidden scrollbar-hide overflow-x-scroll flex gap-x-6 px-4 justify-center pb-3">
+				<div class="w-full max-w-2xl mx-auto absolute bottom-0 left-0 right-0 overflow-hidden scrollbar-hide grid justify-items-center grid-cols-2 sm:grid-cols-5 gap-x-4 gap-y-2 px-4 justify-center pb-2">
 					{MODELS.map((model, index) => (
 						<button
 							key={index}
-							className="w-max px-4 uppercase py-4 bg-blue-500 text-white cursor-pointer rounded-lg font-semibold flex justify-center items-center hover:scale-x-110 hover:bg-blue-400"
+							className="select-none w-32 h-9 px-4 uppercase py-4 bg-blue-500 text-white cursor-pointer rounded-lg font-semibold flex justify-center items-center hover:scale-x-110 hover:bg-blue-600"
 							onClick={() => setModelSrc(model.src)}
 						>
 							{model.name}

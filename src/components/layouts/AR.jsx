@@ -44,7 +44,7 @@ export default function AR({ src = '/models/ShoeBlueAndWhite.glb' }) {
 					outline="none"
 					ar
 				>
-					<button slot="ar-button" className="bg-gray-200 rounded-md p-2 absolute top-2 right-2 z-20">
+					<button slot="ar-button" className="bg-gray-200 text-sm rounded-md p-1.5 absolute top-1 right-1 sm:right-4 z-20">
 						View in My Space
 					</button>
 				</model-viewer>
