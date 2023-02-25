@@ -52,12 +52,12 @@ export default function App({ Component, pageProps }) {
 		<>
 			<Component {...pageProps} />
 
-			<div class="w-full max-w-2xl mx-auto absolute bottom-0 left-0 right-0 overflow-hidden scrollbar-hide grid justify-items-center grid-cols-2 sm:grid-cols-5 gap-x-4 gap-y-2 px-4 justify-center pb-2">
+			<div className="w-full max-w-2xl mx-auto absolute bottom-0 left-0 right-0 overflow-hidden scrollbar-hide grid justify-items-center grid-cols-3 sm:grid-cols-4 gap-x-2 sm:gap-x-4 gap-y-2 px-4 justify-center pb-2">
 				{MODELS.map((model, index) => (
 					<Link
 						key={index}
 						href={`/${index}`}
-						className="select-none w-32 h-9 px-4 uppercase py-4 bg-blue-500 text-white cursor-pointer rounded-lg font-semibold flex justify-center items-center hover:scale-x-110 hover:bg-blue-600"
+						className="select-none w-24 sm:w-32 h-9 px-4 uppercase py-4 bg-blue-500 text-white cursor-pointer rounded-lg font-semibold flex justify-center items-center hover:scale-x-110 hover:bg-blue-600 transition-all"
 						onClick={() => setModelSrc(model.src)}
 					>
 						{model.name}

@@ -95,7 +95,7 @@ export default function Product({ ModelSrc = '/models/leather_sofa.glb' }) {
 							className="bg-black p-1 rounded-md h-8 cursor-pointer hover:scale-105"
 						/>
 
-						{/* <Image src="/images/brand-logo.svg" alt="Brand Logo" width={150} height={44} className="lg:hidden cursor-pointer" /> */}
+						<Image src="/icons/android-chrome-192x192.png" alt="Brand Logo" width={150} height={44} className="cursor-pointer h-11 w-12" />
 
 						<Image src="/images/share.svg" alt="Share" width={33} height={33} className="bg-black p-1 rounded-md cursor-pointer hover:scale-105" />
 					</div>
@@ -120,7 +120,7 @@ export default function Product({ ModelSrc = '/models/leather_sofa.glb' }) {
 					<QRModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
 				</div>
 
-				{/* <div class="w-full max-w-2xl mx-auto absolute bottom-0 left-0 right-0 overflow-hidden scrollbar-hide grid justify-items-center grid-cols-2 sm:grid-cols-5 gap-x-4 gap-y-2 px-4 justify-center pb-2">
+				{/* <div className="w-full max-w-2xl mx-auto absolute bottom-0 left-0 right-0 overflow-hidden scrollbar-hide grid justify-items-center grid-cols-2 sm:grid-cols-5 gap-x-4 gap-y-2 px-4 justify-center pb-2">
 					{MODELS.map((model, index) => (
 						<button
 							key={index}
