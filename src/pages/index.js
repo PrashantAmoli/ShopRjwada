@@ -25,18 +25,24 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className=" select-text overflow-x-hidden">
-				<div className="w-full relative md:w-8/12 xl:w-7/12 mx-auto flex flex-col justify-center items-center min-h-screen overflow-x-hidden ">
+			<main className=" select-text overflow-x-hidden bg-black">
+				<div className="w-full relative md:w-8/12 xl:w-7/12 mx-auto flex flex-col justify-center items-center min-h-screen overflow-x-hidden">
 					{/* Top bar */}
 					<div className="absolute md:fixed top-1 px-3 md:px-5 lg:px-8 py-2 w-full flex justify-between items-center">
-						<Image src="/images/white-arrow.svg" alt="Back" width={33} height={33} className="bg-black p-1 rounded-md h-8 cursor-pointer" />
+						<Image
+							src="/images/white-arrow.svg"
+							alt="Back"
+							width={33}
+							height={33}
+							className="bg-black p-1 rounded-md h-8 cursor-pointer hover:scale-105"
+						/>
 
-						<Image src="/images/brand-logo.svg" alt="Brand Logo" width={150} height={44} className="lg:hidden cursor-pointer" />
+						{/* <Image src="/images/brand-logo.svg" alt="Brand Logo" width={150} height={44} className="lg:hidden cursor-pointer" /> */}
 
-						<Image src="/images/share.svg" alt="Share" width={33} height={33} className="bg-black p-1 rounded-md cursor-pointer" />
+						<Image src="/images/share.svg" alt="Share" width={33} height={33} className="bg-black p-1 rounded-md cursor-pointer hover:scale-105" />
 					</div>
 
-					<div className="hidden lg:flex w-full min-h-fit absolute top-14 p-1 justify-center">
+					{/* <div className="hidden lg:flex w-full min-h-fit absolute top-14 p-1 justify-center">
 						<button className="relative left-4 w-52 py-3 px-8 mx-1 text-black rounded-full bg-orange-400 hover:bg-orange-500 font-semibold ">
 							360 View
 						</button>
@@ -47,11 +53,11 @@ export default function Home() {
 						>
 							View in your room
 						</button>
-					</div>
+					</div> */}
 
 					<AR product={PRODUCT} />
 
-					<Buy product={PRODUCT} />
+					{/* <Buy product={PRODUCT} /> */}
 
 					<QRModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
 				</div>

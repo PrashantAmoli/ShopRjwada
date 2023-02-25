@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 export default function Document() {
 	return (
@@ -19,6 +20,15 @@ export default function Document() {
 			<body className="w-full min-h-screen overflow-x-hidden">
 				<Main />
 				<NextScript />
+
+				<Script
+					strategy="beforeInteractive"
+					type="module"
+					src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+					onLoad={() => console.log('Model Viewer Loaded')}
+					onReady={() => console.log('Model Viewer Ready')}
+					onError={() => console.log('Model Viewer Error')}
+				/>
 			</body>
 		</Html>
 	);
