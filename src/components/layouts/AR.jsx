@@ -46,7 +46,7 @@ export default function AR({ src = '/models/ShoeBlueAndWhite.glb' }) {
 				>
 					<button
 						slot="ar-button"
-						className="bg-gray-900 hover:bg-gray-800 hover:scale-x-105 border-white border-2 text-sm rounded-md px-1.5 py-0.5 absolute top-1 right-1 sm:right-4 z-20"
+						className="bg-gray-900 hover:bg-gray-800 hover:scale-x-105 border-white/70 text-white border font-semibold text-sm rounded-md px-1.5 py-0.5 absolute top-1 right-1 sm:right-4 z-20"
 					>
 						View in My Space
 					</button>
