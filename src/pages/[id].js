@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { toast } from 'react-toastify';
 
 const PRODUCT = {
 	brand: 'Bacca Bucci',
@@ -90,6 +91,17 @@ export default function Product({ ModelSrc = '/models/leather_sofa.glb' }) {
 		router.prefetch('/7');
 	}, []);
 
+	const handleShare = () => {
+		navigator.clipboard
+			.writeText(`Hey, checkout Rjwada's cool 3D models with AR view at ${window.location.href}`)
+			.then(() => {
+				toast('Link copied to clipboard');
+			})
+			.catch(err => {
+				toast.error('Something wrong with share! Please try again later', err);
+			});
+	};
+
 	return (
 		<>
 			<Head>
@@ -116,7 +128,14 @@ export default function Product({ ModelSrc = '/models/leather_sofa.glb' }) {
 							<p className="font-Montserrat font-bold text-2xl sm:text-3xl text-white">rjwada</p>
 						</div>
 
-						<Image src="/images/share.svg" alt="Share" width={33} height={33} className="bg-black p-1 rounded-md cursor-pointer hover:scale-105" />
+						<Image
+							src="/images/share.svg"
+							alt="Share"
+							width={33}
+							height={33}
+							className="bg-black p-1 rounded-md cursor-pointer hover:scale-105"
+							onClick={handleShare}
+						/>
 					</div>
 
 					{/* <div className="hidden lg:flex w-full min-h-fit absolute top-14 p-1 justify-center">

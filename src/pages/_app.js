@@ -2,6 +2,8 @@ import '@/styles/globals.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MODELS = [
 	{
@@ -92,6 +94,22 @@ export default function App({ Component, pageProps }) {
 					</Link>
 				))}
 			</div>
+
+			<ToastContainer
+				position="bottom-right"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				toastClassName=""
+				bodyClassName=""
+				limit={7}
+				theme={'dark'}
+			/>
 		</>
 	);
 }
