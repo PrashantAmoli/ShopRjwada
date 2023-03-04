@@ -28,12 +28,12 @@ const MODELS = [
 		link: '/shoe1',
 		image: '/models/shoe1.png',
 	},
-	{
-		name: 'shoe2',
-		src: '/models/shoe2.glb',
-		link: '/shoe2',
-		image: '/models/shoe2.png',
-	},
+	// {
+	// 	name: 'shoe2',
+	// 	src: '/models/shoe2.glb',
+	// 	link: '/shoe2',
+	// 	image: '/models/shoe2.png',
+	// },
 	{
 		name: 'shoe3',
 		src: '/models/shoe3.glb',
@@ -46,12 +46,12 @@ const MODELS = [
 		link: '/shoe4',
 		image: '/models/shoe4.png',
 	},
-	{
-		name: 'shoe5',
-		src: '/models/shoe5.glb',
-		link: '/shoe5',
-		image: '/models/shoe5.png',
-	},
+	// {
+	// 	name: 'shoe5',
+	// 	src: '/models/shoe5.glb',
+	// 	link: '/shoe5',
+	// 	image: '/models/shoe5.png',
+	// },
 ];
 
 export default function App({ Component, pageProps }) {
@@ -74,7 +74,7 @@ export default function App({ Component, pageProps }) {
 				))}
 			</div> */}
 
-			<div className="absolute z-20 bottom-2 left-0 right-0 scrollbar-hide flex w-full max-w-4xl mx-auto overflow-x-auto space-x-8 sm:space-x-12 px-4 py-1.5 snap-x snap-proximity">
+			<div className="absolute z-20 bottom-2 left-0 right-0 scrollbar-hide flex w-full max-w-2xl mx-auto overflow-x-auto space-x-8 sm:space-x-12 px-4 py-1.5 snap-x snap-proximity">
 				{MODELS.map((item, index) => (
 					<Link
 						href={`/${index}`}

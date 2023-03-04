@@ -52,7 +52,7 @@ const MODELS = [
 
 export default function Home() {
 	const [modalOpen, setModalOpen] = useState(false);
-	const [ModelSrc, setModelSrc] = useState(MODELS[0].src);
+	const [ModelSrc, setModelSrc] = useState('/models/leather_sofa.glb');
 	const router = useRouter();
 
 	useEffect(() => {

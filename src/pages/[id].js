@@ -36,11 +36,11 @@ const MODELS = [
 		src: '/models/shoe1.glb',
 		link: '/shoe1',
 	},
-	{
-		name: 'shoe2',
-		src: '/models/shoe2.glb',
-		link: '/shoe2',
-	},
+	// {
+	// 	name: 'shoe2',
+	// 	src: '/models/shoe2.glb',
+	// 	link: '/shoe2',
+	// },
 	{
 		name: 'shoe3',
 		src: '/models/shoe3.glb',
@@ -51,11 +51,11 @@ const MODELS = [
 		src: '/models/shoe4.glb',
 		link: '/shoe4',
 	},
-	{
-		name: 'shoe5',
-		src: '/models/shoe5.glb',
-		link: '/shoe5',
-	},
+	// {
+	// 	name: 'shoe5',
+	// 	src: '/models/shoe5.glb',
+	// 	link: '/shoe5',
+	// },
 ];
 
 export async function getServerSideProps(context) {
