@@ -110,7 +110,11 @@ export default function Product({ ModelSrc = '/models/leather_sofa.glb' }) {
 							className="bg-black p-1 rounded-md h-8 cursor-pointer hover:scale-105"
 						/>
 
-						<Image src="/icons/android-chrome-192x192.png" alt="Brand Logo" width={150} height={44} className="cursor-pointer h-12 w-14" />
+						<div className="flex items-center gap-x-3">
+							<Image src="/icons/android-chrome-192x192.png" alt="Brand Logo" width={150} height={44} className="cursor-pointer h-11 w-12" />
+
+							<p className="font-Montserrat font-bold text-2xl sm:text-3xl text-white">rjwada</p>
+						</div>
 
 						<Image src="/images/share.svg" alt="Share" width={33} height={33} className="bg-black p-1 rounded-md cursor-pointer hover:scale-105" />
 					</div>

@@ -17,13 +17,13 @@ const MODELS = [
 		image: '/models/bag.png',
 	},
 	{
-		name: 'Shoe0',
+		name: 'Crystal',
 		src: '/models/ShoeBlueAndWhite.glb',
 		link: '/shoe0',
 		image: '/models/shoe0.png',
 	},
 	{
-		name: 'shoe1',
+		name: 'Cushion',
 		src: '/models/shoe1.glb',
 		link: '/shoe1',
 		image: '/models/shoe1.png',
@@ -35,13 +35,13 @@ const MODELS = [
 	// 	image: '/models/shoe2.png',
 	// },
 	{
-		name: 'shoe3',
+		name: 'Innova',
 		src: '/models/shoe3.glb',
 		link: '/shoe3',
 		image: '/models/shoe3.png',
 	},
 	{
-		name: 'shoe4',
+		name: 'Creta',
 		src: '/models/shoe4.glb',
 		link: '/shoe4',
 		image: '/models/shoe4.png',
@@ -88,7 +88,7 @@ export default function App({ Component, pageProps }) {
 							className="bg-purple-900 h-14 w-14 rounded-full border-2 border-purple-900 hover:border-purple-700 select-text"
 							alt={item.name}
 						/>
-						<p className="uppercase text-xs text-center w-full text-white font-semibold">{item.name}</p>
+						<p className="uppercase text-xs text-center w-full text-white font-semibold font-Montserrat">{item.name}</p>
 					</Link>
 				))}
 			</div>
